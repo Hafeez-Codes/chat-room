@@ -1,6 +1,6 @@
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import PrivateRoutes from './components/PrivateRoutes'
+import PrivateRoutes from './utils/PrivateRoutes'
 import { AuthProvider } from './utils/AuthContext'
 
 import Room from './pages/Room'
