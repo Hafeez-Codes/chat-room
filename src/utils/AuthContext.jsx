@@ -33,7 +33,7 @@ export const AuthProvider = ({ children }) => {
         try {
             const response = await account.createEmailPasswordSession(credentials.email, credentials.password);
             console.log('LOGGED IN:', response)
-            const accountDetails = await account.get();
+            let accountDetails = await account.get();
             setUser(accountDetails)
 
             navigate('/')
@@ -64,7 +64,7 @@ export const AuthProvider = ({ children }) => {
             )
 
             await account.createEmailPasswordSession(credentials.email, credentials.password1)
-            const accountDetails = await account.get();
+            let accountDetails = await account.get();
             console.log('AccountDetails:', accountDetails)
             setUser(accountDetails)
             navigate('/')
